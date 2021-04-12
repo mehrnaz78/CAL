@@ -1,0 +1,99 @@
+C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/IF_Stage_Reg.v {1 {vlog -work work C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/IF_Stage_Reg.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module IF_Stage_Reg
+
+Top level modules:
+	IF_Stage_Reg
+
+} {} {}} C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/MEM_Stage_Reg.v {1 {vlog -work work C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/MEM_Stage_Reg.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module MEM_Stage_Reg
+
+Top level modules:
+	MEM_Stage_Reg
+
+} {} {}} C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/ID_Stage.v {1 {vlog -work work C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/ID_Stage.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ID_Stage
+
+Top level modules:
+	ID_Stage
+
+} {} {}} C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/test.v {1 {vlog -work work C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/test.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}} C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/IF_Stage.v {1 {vlog -work work C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/IF_Stage.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module IF_Stage
+
+Top level modules:
+	IF_Stage
+
+} {} {}} C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/MEM_Stage.v {1 {vlog -work work C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/MEM_Stage.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module MEM_Stage
+
+Top level modules:
+	MEM_Stage
+
+} {} {}} C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/instructionMemory.v {1 {vlog -work work C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/instructionMemory.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module instructionMemory
+
+Top level modules:
+	instructionMemory
+
+} {} {}} C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/ARM.v {1 {vlog -work work C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/ARM.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ARM
+
+Top level modules:
+	ARM
+
+} {} {}} C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/WB_Stage_Reg.v {1 {vlog -work work C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/WB_Stage_Reg.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module WB_Stage_Reg
+
+Top level modules:
+	WB_Stage_Reg
+
+} {} {}} C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/EXE_Stage_Reg.v {1 {vlog -work work C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/EXE_Stage_Reg.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module EXE_Stage_Reg
+
+Top level modules:
+	EXE_Stage_Reg
+
+} {} {}} C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/PC.v {1 {vlog -work work C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/PC.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module PC_Reg
+
+Top level modules:
+	PC_Reg
+
+} {} {}} C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/WB_Stage.v {1 {vlog -work work C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/WB_Stage.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module WB_Stage
+
+Top level modules:
+	WB_Stage
+
+} {} {}} C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/EXE_Stage.v {1 {vlog -work work C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/EXE_Stage.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module EXE_Stage
+
+Top level modules:
+	EXE_Stage
+
+} {} {}} C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/ID_Stage_Reg.v {1 {vlog -work work C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/ID_Stage_Reg.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ID_Stage_Reg
+
+Top level modules:
+	ID_Stage_Reg
+
+} {} {}}

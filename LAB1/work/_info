@@ -1,0 +1,284 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1
+vARM
+Z1 !s100 YQRR<R_]8Da<GmaKdUgo:1
+Z2 Il]mH2>CS9^<ab2@lB<9XP0
+Z3 V?2[cB>lk90YLKN3jbUCQl1
+Z4 dC:\Users\ASUS\Desktop\UT\term8\CAL\LAB1
+Z5 w1618232995
+Z6 8C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/ARM.v
+Z7 FC:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/ARM.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/ARM.v|
+Z10 o-work work -O0
+Z11 n@a@r@m
+Z12 !s108 1618236159.693000
+Z13 !s107 C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/ARM.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vEXE_Stage
+Z14 !s100 ]@g;j7<_bhNdPPmJZS5=U2
+Z15 I1@^RO]jc30I5<DFW_bKOL3
+Z16 Vo9zbl<U@b<1QjL`lXEgcz2
+R4
+Z17 w1618228493
+Z18 8C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/EXE_Stage.v
+Z19 FC:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/EXE_Stage.v
+L0 1
+R8
+r1
+31
+Z20 !s90 -reportprogress|300|-work|work|C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/EXE_Stage.v|
+R10
+Z21 n@e@x@e_@stage
+Z22 !s108 1618236159.774000
+Z23 !s107 C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/EXE_Stage.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vEXE_Stage_Reg
+Z24 !s100 `E:AY_;@GI75f2d4=V9Xe2
+Z25 I5jBW6hPeboaD<2bL<BWVM0
+Z26 V?lF1h]C=2D;Z[gAde4X9o0
+R4
+Z27 w1618228522
+Z28 8C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/EXE_Stage_Reg.v
+Z29 FC:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/EXE_Stage_Reg.v
+L0 1
+R8
+r1
+31
+Z30 !s90 -reportprogress|300|-work|work|C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/EXE_Stage_Reg.v|
+R10
+Z31 n@e@x@e_@stage_@reg
+Z32 !s108 1618236159.843000
+Z33 !s107 C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/EXE_Stage_Reg.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vID_Stage
+Z34 !s100 RlcmVFAn>]>5Q=X4YIRL[3
+Z35 I1>85ESWOU^6Ogzh5^:IQz2
+Z36 VN=S@9QoJL:<kTn:VDXWRo1
+R4
+Z37 w1618228259
+Z38 8C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/ID_Stage.v
+Z39 FC:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/ID_Stage.v
+L0 1
+R8
+r1
+31
+Z40 !s90 -reportprogress|300|-work|work|C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/ID_Stage.v|
+R10
+Z41 n@i@d_@stage
+Z42 !s108 1618236159.923000
+Z43 !s107 C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/ID_Stage.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vID_Stage_Reg
+Z44 !s100 XaVbUM7Ig4KF<]3g17kZY1
+Z45 I_NYIjb2i`>:2ITa1nY^Ck2
+Z46 V1M4D>[9^Ke:PMiPXN7Yk81
+R4
+Z47 w1618228406
+Z48 8C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/ID_Stage_Reg.v
+Z49 FC:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/ID_Stage_Reg.v
+L0 1
+R8
+r1
+31
+Z50 !s90 -reportprogress|300|-work|work|C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/ID_Stage_Reg.v|
+R10
+Z51 n@i@d_@stage_@reg
+Z52 !s108 1618236160.003000
+Z53 !s107 C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/ID_Stage_Reg.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vIF_Stage
+Z54 !s100 o@9BjOK_W6Cl;0m>IPa;^2
+Z55 Ifj1Nn2TWjZ37meF:91Tzz3
+Z56 V@;EAl>bPJPEEYb<BIidE80
+R4
+Z57 w1618230644
+Z58 8C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/IF_Stage.v
+Z59 FC:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/IF_Stage.v
+L0 1
+R8
+r1
+31
+Z60 !s90 -reportprogress|300|-work|work|C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/IF_Stage.v|
+R10
+Z61 n@i@f_@stage
+Z62 !s108 1618236160.083000
+Z63 !s107 C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/IF_Stage.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vIF_Stage_Reg
+Z64 !s100 lJ6;bH=3d<=<IEUN=T9;^0
+Z65 IQP2Z:98ZMD`YHLh4AcDcc1
+Z66 VT<83U3PaMTOEUg=lKR6@i1
+R4
+Z67 w1618230877
+Z68 8C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/IF_Stage_Reg.v
+Z69 FC:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/IF_Stage_Reg.v
+L0 1
+R8
+r1
+31
+Z70 !s90 -reportprogress|300|-work|work|C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/IF_Stage_Reg.v|
+R10
+Z71 n@i@f_@stage_@reg
+Z72 !s108 1618236160.153000
+Z73 !s107 C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/IF_Stage_Reg.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vinstructionMemory
+!i10b 1
+Z74 !s100 dGkS_F]U_LcR4l@?6jnf`3
+Z75 IWkOlHhg0`0b_V_MNb@c1P3
+Z76 V066e=;MCJW[c_V;_Z_^lE1
+R4
+Z77 w1618235931
+Z78 8C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/instructionMemory.v
+Z79 FC:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/instructionMemory.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1618236160.743000
+!s107 C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/instructionMemory.v|
+Z80 !s90 -reportprogress|300|-work|work|C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/instructionMemory.v|
+!s101 -O0
+R10
+Z81 ninstruction@memory
+vMEM_Stage
+Z82 !s100 T67e86FRNMhE6O0T[ZINU2
+Z83 I=iHRQ;27eVePZUV:hH:l`3
+Z84 V[[6@AI7C9^cL@2Q3WgSj]3
+R4
+Z85 w1618232683
+Z86 8C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/MEM_Stage.v
+Z87 FC:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/MEM_Stage.v
+L0 1
+R8
+r1
+31
+Z88 !s90 -reportprogress|300|-work|work|C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/MEM_Stage.v|
+R10
+Z89 n@m@e@m_@stage
+Z90 !s108 1618236160.233000
+Z91 !s107 C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/MEM_Stage.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMEM_Stage_Reg
+Z92 !s100 Pn6:Mh<K0Y9GSCcYWO8R82
+Z93 IPzzUgh9DRSzH>A1YIZ`l81
+Z94 VfFU`IA]COTM:1@n@WB_8O3
+R4
+Z95 w1618228582
+Z96 8C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/MEM_Stage_Reg.v
+Z97 FC:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/MEM_Stage_Reg.v
+L0 1
+R8
+r1
+31
+Z98 !s90 -reportprogress|300|-work|work|C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/MEM_Stage_Reg.v|
+R10
+Z99 n@m@e@m_@stage_@reg
+Z100 !s108 1618236160.303000
+Z101 !s107 C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/MEM_Stage_Reg.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vPC_Reg
+Z102 !s100 14?OR^1XN29`zm:agT>D72
+Z103 IYUf9DUBgMk2kkIQ4A@Y4z3
+Z104 V]kQBIc6aP<`];P14SD4MV3
+R4
+Z105 w1618229835
+Z106 8C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/PC.v
+Z107 FC:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/PC.v
+L0 1
+R8
+r1
+31
+Z108 !s90 -reportprogress|300|-work|work|C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/PC.v|
+R10
+Z109 n@p@c_@reg
+Z110 !s108 1618236160.383000
+Z111 !s107 C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/PC.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vtestbench
+Z112 !s100 ;RzTFL_?6^e@RGEARoj=W1
+Z113 IkJaiCDI@JdY0GM6Oc8X8:2
+Z114 VhGfW:390DM[oDMzegDH9`2
+R4
+Z115 w1618232452
+Z116 8C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/test.v
+Z117 FC:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/test.v
+L0 2
+R8
+r1
+31
+Z118 !s90 -reportprogress|300|-work|work|C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/test.v|
+R10
+Z119 !s108 1618236160.463000
+Z120 !s107 C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/test.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vWB_Stage
+Z121 !s100 F]TZj6DJAC]VfGZ2C`0Mg0
+Z122 IU^SnVo5o=]mARC7]1b66z3
+Z123 V^NCGY]ZHBY6Oa<T<k1Aa73
+R4
+Z124 w1618228647
+Z125 8C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/WB_Stage.v
+Z126 FC:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/WB_Stage.v
+L0 1
+R8
+r1
+31
+Z127 !s90 -reportprogress|300|-work|work|C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/WB_Stage.v|
+R10
+Z128 n@w@b_@stage
+Z129 !s108 1618236160.553000
+Z130 !s107 C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/WB_Stage.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vWB_Stage_Reg
+Z131 !s100 bA7oIfIH0az2Zo1^9cQZE1
+Z132 I`aPUeCi;E_SX9n9KBAkc30
+Z133 VcWd[CiA88=nmleV[cn[?60
+R4
+Z134 w1618228593
+Z135 8C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/WB_Stage_Reg.v
+Z136 FC:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/WB_Stage_Reg.v
+L0 1
+R8
+r1
+31
+Z137 !s90 -reportprogress|300|-work|work|C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/WB_Stage_Reg.v|
+R10
+Z138 n@w@b_@stage_@reg
+!i10b 1
+!s85 0
+Z139 !s108 1618236160.653000
+Z140 !s107 C:/Users/ASUS/Desktop/UT/term8/CAL/LAB1/WB_Stage_Reg.v|
+!s101 -O0
