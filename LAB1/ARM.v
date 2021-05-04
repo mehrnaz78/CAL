@@ -54,6 +54,5 @@ module ARM(input clk, rst);
   MEM_Stage MEM_Stage_(clk, rst, exe_reg_pc, mem_pc);
   MEM_Stage_Reg MEM_Stage_Reg_(clk, rst, mem_pc, mem_reg_pc);
   
-  WB_Stage WB_Stage_(clk, rst, mem_reg_pc, wb_pc);
-  WB_Stage_Reg WB_Stage_Reg_(clk, rst, wb_pc, wb_reg_pc);
+  WB_Stage WB_Stage_(exe_reg_ALU_Result, mem_reg_pc, exe_reg_MEM_R_EN, Result_WB);
 endmodule
