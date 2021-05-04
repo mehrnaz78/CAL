@@ -1,6 +1,6 @@
 module ALU (
     input[3:0] EXE_CMD,
-    input[31:0] Val1, Val2,
+    signed input[31:0] Val1, Val2,
     input C,
     output reg[31:0] ALU_Result,
     output reg[3:0] SR
@@ -13,7 +13,7 @@ module ALU (
             4'b0010: result = Val1 + Val2;
             4'b0011: result = Val1 + Val2 + C;
             4'b0100: result = Val1 - Val2;
-            4'b0101: result = Val1 - Val2 – ~C;
+            4'b0101: result = Val1 - Val2 - ~C;
             4'b0110: result = Val1 & Val2;
             4'b0111: result = Val1 | Val2;
             4'b1000: result = Val1 ^ Val2;
