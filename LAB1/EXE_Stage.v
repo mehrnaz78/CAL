@@ -14,7 +14,6 @@ module EXE_Stage(
   wire [31:0] Signed_EX_imm24;
   assign Signed_EX_imm24 = { {8{Signed_imm_24[23]}}, Signed_imm_24[23:0] };
   assign Branch_Address = (Signed_EX_imm24 << 2) + PC;
-  assign PC = PC_in;
   
   ALU alu(EXE_CMD, Val1, Val2, SR[1], ALU_res, Status_bits);
 endmodule

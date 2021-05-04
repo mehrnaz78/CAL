@@ -3,9 +3,9 @@ module ALU (
     signed input[31:0] Val1, Val2,
     input C,
     output reg[31:0] ALU_Result,
-    output reg[3:0] SR
+    output [3:0] SR
 );
-    signed reg[32:0] result;
+    reg signed [32:0] result;
     always @(EXE_CMD, Val1, Val2) begin
         case (EXE_CMD)
             4'b0001: result = Val2;
