@@ -5,8 +5,9 @@ module Val2_Generator (
     input [3:0] EXE,
     output [31:0] Val2
 );
-    wire [39:0] rotation_temp = { Shift_operand[7:0], 24'b0, Shift_operand[7:0]}
-    assign Val2 = (imm == 1) ? (rotation_temp >> Shift_operand[11:8])[31:0] :
+    wire [39:0] rotation_temp = { Shift_operand[7:0], 24'b0, Shift_operand[7:0]};
+    wire [39:0] rotated = (rotation_temp >> Shift_operand[11:8]);
+    assign Val2 = (imm == 1) ? rotated[31:0] :
                                 32'b0;
 
 endmodule
