@@ -1,20 +1,55 @@
 module ARM(input clk, rst);
-  wire freeze, branchTaken;
+  wire freeze, flush;
   wire [31:0] if_pc, inst, id_pc, exe_pc, mem_pc, wb_pc, branch_addr;
   wire [31:0] if_pc_reg, inst_reg, id_reg_pc, exe_reg_pc, mem_reg_pc, wb_reg_pc;
+  
+  wire writeBackEn, Dest_wb, hazard, WB_EN, MEM_R_EN, MEM_W_EN, B, S, imm, Two_src;
+  wire [31:0] Result_WB, Val_Rn, Val_Rm;
+  wire [3:0] SR, EXE_CMD, Dest, src1, src2;
+  wire [11:0] Shift_operand;
+  wire [23:0] Signed_imm_24;
+  
+  wire WB_EN_reg, MEM_R_EN_reg, MEM_W_EN_reg, B_reg, S_reg, imm_reg;
+  wire [31:0] Val_Rn_reg, Val_Rm_reg;
+  wire [3:0] EXE_CMD_reg, Dest_reg;
+  wire [11:0] Shift_operand_reg;
+  wire [23:0] Signed_imm_24_reg;
 
+  wire exe_reg_WB_EN, exe_reg_MEM_R_EN, exe_reg_MEM_W_EN;
+  wire [31:0] exe_reg_ALU_Result, exe_reg_Val_Rm;
+  wire [3:0] exe_reg_Dest;
+
+  wire [31:0] exe_ALU_Res, exe_Status_bits;
+  
   assign freeze = 1'b0;
+  assign flush = 1'b0;
   assign branch_taken = 1'b0;
   assign branch_addr = 32'b0;
+  assign writeBackEn = 1'b0;
+  assign hazard = 1'b0;
+  assign Dest_wb = 1'b0;
+  assign Result_WB = 32'b0;
+  assign SR = 4'b0;
 
   IF_Stage IF_Stage_(clk, rst, freeze, branch_taken, branch_addr, if_pc, inst);
   IF_Stage_Reg IF_Stage_Reg_(clk, rst, freeze, flush, if_pc, inst, if_pc_reg, inst_reg);
   
-  ID_Stage ID_Stage_(clk, rst, if_pc_reg, id_pc);
-  ID_Stage_Reg ID_Stage_Reg_(clk, rst, id_pc, id_reg_pc);
+  ID_Stage ID_Stage_(clk, rst, inst_reg, Result_WB, writeBackEn, Dest_wb, hazard, SR,
+                      WB_EN, MEM_R_EN, MEM_W_EN, B, S, EXE_CMD, Val_Rn, Val_Rm, 
+                      imm, Shift_operand, Signed_imm_24, Dest, src1, src2, Two_src);
+  ID_Stage_Reg ID_Stage_Reg_(clk, rst, flush, WB_EN, MEM_R_EN, MEM_W_EN, B, S, EXE_CMD, 
+                              if_pc_reg, Val_Rn, Val_Rm, imm, Shift_operand, Signed_imm_24, Dest,
+                              WB_EN_reg, MEM_R_EN_reg, MEM_W_EN_reg, branch_taken, S_reg,
+                              EXE_CMD_reg, id_reg_pc, Val_Rn_reg, Val_Rm_reg, imm_reg,                
+                              Shift_operand_reg, Signed_imm_24_reg, Dest_reg);
   
-  EXE_Stage EXE_Stage_(clk, rst, id_reg_pc, exe_pc);
-  EXE_Stage_Reg EXE_Stage_Reg_(clk, rst, exe_pc, exe_reg_pc);
+  EXE_Stage EXE_Stage_(clk, EXE_CMD_reg, MEM_R_EN_reg, MEM_W_EN_reg, id_reg_pc, Val_Rn_reg, Val_Rm_reg, imm_reg, Shift_operand_reg, Signed_imm_24_reg, SR,
+                       exe_ALU_Res, branch_addr, exe_Status_bits);
+  EXE_Stage_Reg EXE_Stage_Reg_(clk, rst, WB_EN_reg, MEM_R_EN_reg, MEM_W_EN_reg, ALU_res, Val_Rm_reg, Dest_reg, 
+                               exe_reg_WB_EN, exe_reg_MEM_R_EN, exe_reg_MEM_W_EN, exe_reg_ALU_Result, exe_reg_Val_Rm, exe_reg_Dest);
+
+  Status_Register Status_Register_(clk, rst, exe_Status_bits, S_reg, 
+                                   SR);
   
   MEM_Stage MEM_Stage_(clk, rst, exe_reg_pc, mem_pc);
   MEM_Stage_Reg MEM_Stage_Reg_(clk, rst, mem_pc, mem_reg_pc);
