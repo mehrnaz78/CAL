@@ -5,7 +5,7 @@ module ALU (
     output [31:0] ALU_Result,
     output [3:0] SR
 );
-    reg [31:0] result;
+    reg [32:0] result;
     always @(EXE_CMD, Val1, Val2) begin
         case (EXE_CMD)
             4'b0001: result = Val2;
@@ -27,7 +27,7 @@ module ALU (
     		       			(((~result[31])&Val1[31]&Val2[31]) | (result[31]&(~Val1[31])&(~Val2[31])))
     		       			:
     		       			0);
-    assign SR[1] = (EXE_CMD == 4'b0100 || EXE_CMD == 4'b0101 || EXE_CMD == 4'b0010 || EXE_CMD == 4'b0011) ? 1 : 0;
+    assign SR[1] = (EXE_CMD == 4'b0100 || EXE_CMD == 4'b0101 || EXE_CMD == 4'b0010 || EXE_CMD == 4'b0011) ? result[32] : 0;
     assign SR[2] = ~(|result);
     assign SR[3] = result[31];
     assign ALU_Result = result;

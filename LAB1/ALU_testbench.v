@@ -7,7 +7,6 @@ module ALU_testbench ();
     ALU alu(EXE_CMD, Val1, Val2, C, ALU_Result, SR);
 
     initial begin
-        #10;
         Val1 = 31'd13;
         Val2 = 31'd15;
         C = 1;
@@ -28,6 +27,10 @@ module ALU_testbench ();
         EXE_CMD = 4'b0111; // result = Val1 | Val2;
         #10;
         EXE_CMD = 4'b1000; // result = Val1 ^ Val2;
+        #10;
+        EXE_CMD = 4'b0010; // result = Val1 + Val2;
+        Val1 = 31'd4000000000;
+        Val2 = 31'd4000000000;
         #10;
     end
 endmodule

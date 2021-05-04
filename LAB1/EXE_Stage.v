@@ -8,7 +8,7 @@ module EXE_Stage(
   input [11:0] Shift_operand,
   input [23:0] Signed_imm_24,
   input [3:0] SR,
-  output [31:0] ALU_res, Branch_Address
+  output [31:0] ALU_res, Branch_Address,
   output [3:0] Status_bits
 );
   wire [31:0] Signed_EX_imm24;
