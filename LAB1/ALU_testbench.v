@@ -1,7 +1,7 @@
 module ALU_testbench ();
-    wire[3:0] EXE_CMD;
-    wire[31:0] Val1, Val2;
-    wire C;
+    reg[3:0] EXE_CMD;
+    reg[31:0] Val1, Val2;
+    reg C;
     wire[31:0] ALU_Result;
     wire [3:0] SR;
     ALU alu(EXE_CMD, Val1, Val2, C, ALU_Result, SR);
@@ -10,7 +10,6 @@ module ALU_testbench ();
         #10
         Val1 = 31'd13;
         Val2 = 31'd15;
-        SR = 4'b0;
         C = 1;
         EXE_CMD = 4'b0001; // result = Val2;
         #10
@@ -30,5 +29,6 @@ module ALU_testbench ();
         #10
         EXE_CMD = 4'b1000; // result = Val1 ^ Val2;
         #10
+        $stop;
     end
 endmodule

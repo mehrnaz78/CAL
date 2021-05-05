@@ -3,8 +3,18 @@ use verilog.vl_types.all;
 entity EXE_Stage is
     port(
         clk             : in     vl_logic;
-        rst             : in     vl_logic;
-        PC_in           : in     vl_logic_vector(31 downto 0);
-        PC              : out    vl_logic_vector(31 downto 0)
+        EXE_CMD         : in     vl_logic_vector(3 downto 0);
+        MEM_R_EN        : in     vl_logic;
+        MEM_W_EN        : in     vl_logic;
+        PC              : in     vl_logic_vector(31 downto 0);
+        Val_Rn          : in     vl_logic_vector(31 downto 0);
+        Val_Rm          : in     vl_logic_vector(31 downto 0);
+        imm             : in     vl_logic;
+        Shift_operand   : in     vl_logic_vector(11 downto 0);
+        Signed_imm_24   : in     vl_logic_vector(23 downto 0);
+        SR              : in     vl_logic_vector(3 downto 0);
+        ALU_res         : out    vl_logic_vector(31 downto 0);
+        Branch_Address  : out    vl_logic_vector(31 downto 0);
+        Status_bits     : out    vl_logic_vector(3 downto 0)
     );
 end EXE_Stage;
