@@ -3,7 +3,7 @@ module ARM(input clk, rst);
   wire [31:0] if_pc, inst, id_pc, exe_pc, mem_pc, wb_pc, branch_addr;
   wire [31:0] if_pc_reg, inst_reg, id_reg_pc, exe_reg_pc, mem_reg_pc, wb_reg_pc;
   
-  wire writeBackEn, Dest_wb, hazard, WB_EN, MEM_R_EN, MEM_W_EN, B, S, imm, Two_src;
+  wire writeBackEn, Dest_wb, Hazard, WB_EN, MEM_R_EN, MEM_W_EN, B, S, imm, Two_src;
   wire [31:0] Result_WB, Val_Rn, Val_Rm;
   wire [3:0] SR, EXE_CMD, Dest, src1, src2;
   wire [11:0] Shift_operand;
@@ -21,12 +21,11 @@ module ARM(input clk, rst);
 
   wire [31:0] exe_ALU_Res, exe_Status_bits;
   
-  assign freeze = 1'b0;
+  assign freeze = Hazard;
   assign flush = 1'b0;
   assign branch_taken = 1'b0;
   assign branch_addr = 32'b0;
   assign writeBackEn = 1'b0;
-  assign hazard = 1'b0;
   assign Dest_wb = 1'b0;
   assign Result_WB = 32'b0;
   assign SR = 4'b0;
@@ -34,7 +33,7 @@ module ARM(input clk, rst);
   IF_Stage IF_Stage_(clk, rst, freeze, branch_taken, branch_addr, if_pc, inst);
   IF_Stage_Reg IF_Stage_Reg_(clk, rst, freeze, flush, if_pc, inst, if_pc_reg, inst_reg);
   
-  ID_Stage ID_Stage_(clk, rst, inst_reg, Result_WB, writeBackEn, Dest_wb, hazard, SR,
+  ID_Stage ID_Stage_(clk, rst, inst_reg, Result_WB, writeBackEn, Dest_wb, Hazard, SR,
                       WB_EN, MEM_R_EN, MEM_W_EN, B, S, EXE_CMD, Val_Rn, Val_Rm, 
                       imm, Shift_operand, Signed_imm_24, Dest, src1, src2, Two_src);
   ID_Stage_Reg ID_Stage_Reg_(clk, rst, flush, WB_EN, MEM_R_EN, MEM_W_EN, B, S, EXE_CMD, 
@@ -55,4 +54,6 @@ module ARM(input clk, rst);
   MEM_Stage_Reg MEM_Stage_Reg_(clk, rst, mem_pc, mem_reg_pc);
   
   WB_Stage WB_Stage_(exe_reg_ALU_Result, mem_reg_pc, exe_reg_MEM_R_EN, Result_WB);
+
+  Hazard_Detection_Unit Hazard_Detection_Unit_(inst_reg[19:16], inst_reg[3:0], Dest_reg, WB_EN_reg, exe_reg_Dest, exe_reg_WB_EN, Two_src, Hazard);
 endmodule
