@@ -1,10 +1,15 @@
 module Status_Register (
     input clk, rst,
     input [3:0] Status_bits_in,
-    output reg [3:0] Status_bits,
+<<<<<<< HEAD
+=======
+    input S,
+>>>>>>> cd925530b300bcd56e2ae0cd44974913a6b6c728
+    output reg [3:0] Status_bits
 );
-    always @(posedge clk, posedge rst) begin
+    always @(negedge clk, posedge rst) begin
         if (rst) Status_bits <= 4'b0;
-        else Status_bits <= Status_bits_in;
+        else if (S) Status_bits <= Status_bits_in;
+        else Status_bits <= Status_bits;
     end
 endmodule

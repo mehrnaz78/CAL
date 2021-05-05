@@ -5,6 +5,7 @@ entity Status_Register is
         clk             : in     vl_logic;
         rst             : in     vl_logic;
         Status_bits_in  : in     vl_logic_vector(3 downto 0);
+        S               : in     vl_logic;
         Status_bits     : out    vl_logic_vector(3 downto 0)
     );
 end Status_Register;

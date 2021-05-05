@@ -1,11 +1,16 @@
 module ALU (
+<<<<<<< HEAD
     input[3:0] EXE_CMD,
-    signed input[31:0] Val1, Val2,
+    input signed[31:0] Val1, Val2,
+=======
+    input [3:0] EXE_CMD,
+    input [31:0] Val1, Val2,
+>>>>>>> cd925530b300bcd56e2ae0cd44974913a6b6c728
     input C,
-    output reg[31:0] ALU_Result,
+    output [31:0] ALU_Result,
     output [3:0] SR
 );
-    reg signed [32:0] result;
+    reg [32:0] result;
     always @(EXE_CMD, Val1, Val2) begin
         case (EXE_CMD)
             4'b0001: result = Val2;
@@ -20,8 +25,15 @@ module ALU (
             default: result = 4'bXXXX;
         endcase
     end
-    assign SR[0] = (EXE_CMD == 4'b0100 || EXE_CMD == 4'b0101 || EXE_CMD == 4'b0010 || EXE_CMD == 4'b0011) ? (~result[7]&Val1[7]&Val2[7])|(result[7]&(~Val1[7])&(~Val2[7])) : 0;
-    assign SR[1] = (EXE_CMD == 4'b0100 || EXE_CMD == 4'b0101 || EXE_CMD == 4'b0010 || EXE_CMD == 4'b0011) ? 1 : 0;
+    assign SR[0] = (EXE_CMD == 4'b0100 || EXE_CMD == 4'b0101) ? 
+    					(((~result[31])&Val1[31]&(~Val2[31])) | (result[31]&(~Val1[31])&Val2[31]))
+    					: 
+    		       		((EXE_CMD == 4'b0010 || EXE_CMD == 4'b0011) ? 
+    		       			(((~result[31])&Val1[31]&Val2[31]) | (result[31]&(~Val1[31])&(~Val2[31])))
+    		       			:
+    		       			0);
+    assign SR[1] = (EXE_CMD == 4'b0100 || EXE_CMD == 4'b0101 || EXE_CMD == 4'b0010 || EXE_CMD == 4'b0011) ? result[32] : 0;
     assign SR[2] = ~(|result);
     assign SR[3] = result[31];
+    assign ALU_Result = result;
 endmodule
