@@ -1,4 +1,4 @@
-module ConditionCheck(input [3:0] cond, status, output reg o);
+module ConditionCheck(input [3:0] cond, status, output o);
                     
 always @(cond, status) begin
     case (cond)

@@ -61,19 +61,19 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	PC_Reg
 
-} {} {}} C:/Users/ASUS/Desktop/UT/term8/CAL/ARM/CAL/LAB1/WB_Stage.v {1 {vlog -work work C:/Users/ASUS/Desktop/UT/term8/CAL/ARM/CAL/LAB1/WB_Stage.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module WB_Stage
-
-Top level modules:
-	WB_Stage
-
 } {} {}} C:/Users/ASUS/Desktop/UT/term8/CAL/ARM/CAL/LAB1/Condition_Check.v {1 {vlog -work work C:/Users/ASUS/Desktop/UT/term8/CAL/ARM/CAL/LAB1/Condition_Check.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module ConditionCheck
 
 Top level modules:
 	ConditionCheck
+
+} {} {}} C:/Users/ASUS/Desktop/UT/term8/CAL/ARM/CAL/LAB1/WB_Stage.v {1 {vlog -work work C:/Users/ASUS/Desktop/UT/term8/CAL/ARM/CAL/LAB1/WB_Stage.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module WB_Stage
+
+Top level modules:
+	WB_Stage
 
 } {} {}} C:/Users/ASUS/Desktop/UT/term8/CAL/ARM/CAL/LAB1/ID_Stage_Reg.v {1 {vlog -work work {C:\Users\ASUS\Desktop\UT\term8\CAL\ARM\CAL\LAB1\ID_Stage_Reg.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -109,6 +109,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	MEM_Stage_Reg
+
+} {} {}} C:/Users/ASUS/Desktop/UT/term8/CAL/ARM/CAL/LAB1/test.v {1 {vlog -work work {C:\Users\ASUS\Desktop\UT\term8\CAL\ARM\CAL\LAB1\test.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module testbench
+
+Top level modules:
+	testbench
 
 } {} {}} C:/Users/ASUS/Desktop/UT/term8/CAL/ARM/CAL/LAB1/ID_Stage.v {1 {vlog -work work C:/Users/ASUS/Desktop/UT/term8/CAL/ARM/CAL/LAB1/ID_Stage.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
