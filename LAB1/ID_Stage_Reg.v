@@ -19,7 +19,7 @@ module ID_Stage_Reg(input clk, rst, flush,
                     output reg [3:0] Dest);
     
     always @(posedge clk, posedge rst) begin
-      if(rst) begin
+      if(rst | flush) begin
         PC <= 32'b0;
         WB_EN <= 1'b0;
         MEM_R_EN <= 1'b0;

@@ -11,9 +11,9 @@ module testbench();
     #500;
     rst = 0;
     #500
-    for (i = 0; i<50; i = i + 1)begin
+    for (i = 0; i<1000; i = i + 1)begin
       clk = ~clk;
-      #10000;
+      #200;
     end
     $stop;
   end

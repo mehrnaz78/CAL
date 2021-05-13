@@ -4,7 +4,7 @@ module DataMemory(input clk, MEM_R_EN, MEM_W_EN,
                  
     reg [31:0] memory [0:63];
     wire [31:0] addr;
-    assign addr = (ALU_Res >> 2) - 32'b00000000000000000000010000000000;
+    assign addr = (ALU_Res - 32'd1024) >> 2;
     
     always @(posedge clk) begin
       if (MEM_W_EN) memory[addr[5:0]] <= Val_Rm;

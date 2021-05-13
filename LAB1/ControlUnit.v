@@ -4,7 +4,8 @@ module ControlUnit(input S,
                     output reg WB_EN, MEM_R_EN, MEM_W_EN, B, out_S,
                     output reg [3:0] EXE_CMD);
                     
-  always @(mode, Op_code)begin
+  always @(mode, Op_code, S)begin
+    WB_EN = 1'b1;
     case(mode)
       2'b00: begin
         B = 1'b0;
@@ -21,23 +22,32 @@ module ControlUnit(input S,
           4'b0000: EXE_CMD = 4'b0110;
           4'b1100: EXE_CMD = 4'b0111;
           4'b0001: EXE_CMD = 4'b1000;
-          4'b1010: EXE_CMD = 4'b0100;
-          4'b1000: EXE_CMD = 4'b0110;
+          4'b1010: begin
+            EXE_CMD = 4'b0100;
+            WB_EN = 1'b0;
+          end
+          4'b1000: begin
+            EXE_CMD = 4'b0110;
+            WB_EN = 1'b0;
+          end
+          
         endcase
       end
       
       2'b01: begin
         B = 1'b0;        
-        out_S = 1'b0;
         EXE_CMD = 4'b0010;
         case(S)
           1'b0:  begin
             MEM_R_EN = 1'b0;
             MEM_W_EN = 1'b1;
+            WB_EN = 1'b0;
+            out_S = 1'b0;
           end
           1'b1: begin
             MEM_R_EN = 1'b1;
             MEM_W_EN = 1'b0;
+            out_S = 1'b1;
           end
         endcase
       end
@@ -49,7 +59,7 @@ module ControlUnit(input S,
         MEM_W_EN = 1'b0;
         EXE_CMD = 4'bxxxx;
       end
-    
+      
     endcase
   end  
 endmodule

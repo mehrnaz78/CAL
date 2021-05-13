@@ -1,8 +1,8 @@
 module Hazard_Detection_Unit (
-    input [4:0] src1, src2, 
-    input [4:0] Exe_Dest,
+    input [3:0] src1, src2, 
+    input [3:0] Exe_Dest,
     input Exe_WB_EN,
-    input [4:0] Mem_Dest,
+    input [3:0] Mem_Dest,
     input Mem_WB_EN,
     input two_source,
     output Hazard_Detected

@@ -31,10 +31,10 @@ module ID_Stage(input clk, rst,
   assign Shift_operand = inst[11:0];
   assign imm = inst[25];
   assign Two_src = (~imm)|(MEM_W_EN);
-  assign src1 = inst[19:16];
+  assign src1 = ((inst[24:21] == 4'b1101) | (inst[24:21] == 4'b1111))?4'b1111:inst[19:16];
   assign src2 = (MEM_W_EN)?inst[15:12]:inst[3:0];
   assign Dest = inst[15:12];
-  RegisterFile register_file(clk, rst, inst[19:16], (MEM_W_EN)?inst[15:12]:inst[3:0], 
+  RegisterFile register_file(clk, rst, inst[19:16], src2, 
                     Dest_wb, Result_WB, writeBackEn, Val_Rn, Val_Rm);
 
   ControlUnit control_unit(inst[20], inst[27:26], inst[24:21],

@@ -49,5 +49,5 @@ module instructionMemory(input [31:0]pc , output [31:0] instruction);
         instr[45] = 32'b11100100100100000110000000010100; //STR R6 ,[R0],#20 //R4 = 10
         instr[46] = 32'b11101010111111111111111111111111; 
       end 
-      assign instruction = (pc[31:2] < 7) ? instr[pc[31:2]] :  32'b0;
+      assign instruction = (pc[31:2] < 47) ? instr[pc[31:2]] :  32'b0;
  endmodule   

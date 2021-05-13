@@ -13,6 +13,7 @@ module EXE_Stage_Reg(
         MEM_W_EN <= 0;
         ALU_Result <= 0;
         ST_val <= 0;
+        Dest <= 0;
       end
       else begin
         WB_EN <= WB_EN_in; 
@@ -20,6 +21,7 @@ module EXE_Stage_Reg(
         MEM_W_EN <= MEM_W_EN_in;
         ALU_Result <= ALU_Result_in;
         ST_val <= ST_val_in;
+        Dest <= Dest_in;
       end
     end
 endmodule

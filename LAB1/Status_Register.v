@@ -5,7 +5,7 @@ module Status_Register (
     output reg [3:0] Status_bits
 );
     always @(negedge clk, posedge rst) begin
-        if (rst) Status_bits <= 4'b0;
+        if (rst) Status_bits <= 4'b1110;
         else if (S) Status_bits <= Status_bits_in;
         else Status_bits <= Status_bits;
     end
