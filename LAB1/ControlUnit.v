@@ -47,7 +47,7 @@ module ControlUnit(input S,
           1'b1: begin
             MEM_R_EN = 1'b1;
             MEM_W_EN = 1'b0;
-            out_S = 1'b1;
+            out_S = 1'b0;
           end
         endcase
       end

@@ -17,7 +17,7 @@ module Val2_Generator (
             case (Shift_operand[6:5])
                 2'b00: Val2 = Rm_Val << Shift_operand[11:7];
                 2'b01: Val2 = Rm_Val >> Shift_operand[11:7];
-                2'b10: Val2 = Rm_Val >> Shift_operand[11:7];
+                2'b10: Val2 = Rm_Val >>> Shift_operand[11:7];
                 2'b11: Val2 = Rm_rotated[31:0];
                 default: Val2 = 32'bX;
             endcase

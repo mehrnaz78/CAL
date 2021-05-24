@@ -19,7 +19,22 @@ module ID_Stage_Reg(input clk, rst, flush,
                     output reg [3:0] Dest);
     
     always @(posedge clk, posedge rst) begin
-      if(rst | flush) begin
+      if(rst) begin
+        PC <= 32'b0;
+        WB_EN <= 1'b0;
+        MEM_R_EN <= 1'b0;
+        MEM_W_EN <= 1'b0;
+        B <= 1'b0;
+        S <= 1'b0;
+        EXE_CMD <= 4'b0;
+        Val_Rn <= 32'b0;
+        Val_Rm <= 32'b0;
+        imm <= 1'b0;
+        Shift_operand <= 12'b0;
+        Signed_imm_24 <= 24'b0;
+        Dest <= 4'b0;
+      end
+      if(flush) begin
         PC <= 32'b0;
         WB_EN <= 1'b0;
         MEM_R_EN <= 1'b0;
