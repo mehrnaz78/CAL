@@ -7,7 +7,8 @@ module ID_Stage_Reg(input clk, rst, flush,
                     input imm_IN,
                     input [11:0] Shift_operand_IN,
                     input [23:0] Signed_imm_24_IN,
-                    input [3:0] Dest_IN,
+                    input [3:0] Dest_IN, src1_IN, src2_IN,
+		    input carry_in,
                     
                     output reg WB_EN, MEM_R_EN, MEM_W_EN, B, S,
                     output reg [3:0] EXE_CMD,
@@ -16,7 +17,8 @@ module ID_Stage_Reg(input clk, rst, flush,
                     output reg imm,                
                     output reg [11:0] Shift_operand,
                     output reg [23:0] Signed_imm_24,
-                    output reg [3:0] Dest);
+                    output reg [3:0] Dest, src1, src2,
+		    output reg carry);
     
     always @(posedge clk, posedge rst) begin
       if(rst) begin
@@ -33,8 +35,11 @@ module ID_Stage_Reg(input clk, rst, flush,
         Shift_operand <= 12'b0;
         Signed_imm_24 <= 24'b0;
         Dest <= 4'b0;
+	src1 <= 4'b0;
+	src2 <= 4'b0;
+	carry <= 1'b0;
       end
-      if(flush) begin
+      else if(flush) begin
         PC <= 32'b0;
         WB_EN <= 1'b0;
         MEM_R_EN <= 1'b0;
@@ -48,6 +53,9 @@ module ID_Stage_Reg(input clk, rst, flush,
         Shift_operand <= 12'b0;
         Signed_imm_24 <= 24'b0;
         Dest <= 4'b0;
+	src1 <= 4'b0;
+	src2 <= 4'b0;
+	carry <= 1'b0;
       end
       else begin
         PC <= PC_IN;
@@ -63,6 +71,9 @@ module ID_Stage_Reg(input clk, rst, flush,
         Shift_operand <= Shift_operand_IN;
         Signed_imm_24 <= Signed_imm_24_IN;
         Dest <= Dest_IN;
+	src1 <= src1_IN;
+	src2 <= src2_IN;
+	carry <= carry_in;
       end
     end
 endmodule

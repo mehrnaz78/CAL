@@ -12,7 +12,7 @@ module IF_Stage_Reg(input clk, rst, freeze, flush,
           PC <= 32'b0;
           Instruction <= 32'b0;	
 	end
-        if(freeze) begin
+        else if(freeze) begin
           PC <= PC;
           Instruction <= Instruction;
         end
