@@ -13,6 +13,7 @@ entity MEM_Stage is
         MEM_R_EN        : out    vl_logic;
         ALU_Res         : out    vl_logic_vector(31 downto 0);
         DM_out          : out    vl_logic_vector(31 downto 0);
-        Dest            : out    vl_logic_vector(3 downto 0)
+        Dest            : out    vl_logic_vector(3 downto 0);
+        forward_data    : out    vl_logic_vector(31 downto 0)
     );
 end MEM_Stage;

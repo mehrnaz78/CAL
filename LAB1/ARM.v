@@ -36,7 +36,8 @@ module ARM(input clk, rst, mode);
   wire [31:0] exe_val_Rm;
   wire Hazard_detected;
   wire carry;
-
+  wire [31:0] mem_forward_data;
+  
   assign Hazard = Hazard_detected & (~mode);
   assign freeze = Hazard;
   assign flush = branch_taken;
@@ -56,7 +57,7 @@ module ARM(input clk, rst, mode);
                               EXE_CMD_reg, id_reg_pc, Val_Rn_reg, Val_Rm_reg, imm_reg,                
                               Shift_operand_reg, Signed_imm_24_reg, Dest_reg, src1_reg, src2_reg, carry);
   
-  EXE_Stage EXE_Stage_(clk, EXE_CMD_reg, sel_src1, sel_src2, MEM_R_EN_reg, MEM_W_EN_reg, id_reg_pc, Val_Rn_reg, Val_Rm_reg, exe_reg_ALU_Result, Result_WB, imm_reg, Shift_operand_reg, Signed_imm_24_reg, carry,
+  EXE_Stage EXE_Stage_(clk, EXE_CMD_reg, sel_src1, sel_src2, MEM_R_EN_reg, MEM_W_EN_reg, id_reg_pc, Val_Rn_reg, Val_Rm_reg, mem_forward_data, Result_WB, imm_reg, Shift_operand_reg, Signed_imm_24_reg, carry,
                        exe_ALU_Res, branch_addr, exe_val_Rm, exe_Status_bits);
   EXE_Stage_Reg EXE_Stage_Reg_(clk, rst, WB_EN_reg, MEM_R_EN_reg, MEM_W_EN_reg, exe_ALU_Res, exe_val_Rm, Dest_reg, 
                                exe_reg_WB_EN, exe_reg_MEM_R_EN, exe_reg_MEM_W_EN, exe_reg_ALU_Result, exe_reg_Val_Rm, exe_reg_Dest);
@@ -66,7 +67,7 @@ module ARM(input clk, rst, mode);
   
   MEM_Stage MEM_Stage_(clk, exe_reg_WB_EN, exe_reg_MEM_R_EN, exe_reg_MEM_W_EN, 
                         exe_reg_Dest, exe_reg_ALU_Result, exe_reg_Val_Rm, 
-                        mem_WB_EN, mem_MEM_R_EN, mem_ALU_Res, mem_DM_out, mem_Dest);
+                        mem_WB_EN, mem_MEM_R_EN, mem_ALU_Res, mem_DM_out, mem_Dest, mem_forward_data);
   MEM_Stage_Reg MEM_Stage_Reg_(clk, rst, mem_WB_EN, mem_MEM_R_EN, mem_ALU_Res, mem_DM_out, mem_Dest,
                               mem_reg_WB_EN, mem_reg_MEM_R_EN, mem_reg_Dest, mem_reg_ALU_Res, mem_reg_DM_out);
   

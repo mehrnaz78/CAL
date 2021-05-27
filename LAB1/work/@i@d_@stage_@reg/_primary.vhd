@@ -18,6 +18,9 @@ entity ID_Stage_Reg is
         Shift_operand_IN: in     vl_logic_vector(11 downto 0);
         Signed_imm_24_IN: in     vl_logic_vector(23 downto 0);
         Dest_IN         : in     vl_logic_vector(3 downto 0);
+        src1_IN         : in     vl_logic_vector(3 downto 0);
+        src2_IN         : in     vl_logic_vector(3 downto 0);
+        carry_in        : in     vl_logic;
         WB_EN           : out    vl_logic;
         MEM_R_EN        : out    vl_logic;
         MEM_W_EN        : out    vl_logic;
@@ -30,6 +33,9 @@ entity ID_Stage_Reg is
         imm             : out    vl_logic;
         Shift_operand   : out    vl_logic_vector(11 downto 0);
         Signed_imm_24   : out    vl_logic_vector(23 downto 0);
-        Dest            : out    vl_logic_vector(3 downto 0)
+        Dest            : out    vl_logic_vector(3 downto 0);
+        src1            : out    vl_logic_vector(3 downto 0);
+        src2            : out    vl_logic_vector(3 downto 0);
+        carry           : out    vl_logic
     );
 end ID_Stage_Reg;
